@@ -1,0 +1,26 @@
+<!-- Radio button -->
+<input type="radio" name="P2CliCampo1" value="Lojista (Li e concordo com a Políticas de Vendas da Loja)">Lojista (Li e concordo com a Políticas de Vendas da Loja)<br>
+<input type="radio" name="P2CliCampo1" value="Revendedor (Li e concordo com a Políticas de Vendas da Loja)">Revendedor (Li e concordo com a Políticas de Vendas da Loja)<br>
+
+<script>
+setTimeout("SelecionaDefaultCampo1()",1);
+
+function SelecionaDefaultCampo1(){
+  var iSelect=0,Achei=false;
+  while(iSelect<document.Form1.P2CliCampo1.length && !Achei){
+    if(document.Form1.P2CliCampo1[iSelect].value=="<ValorCampo>"){document.Form1.P2CliCampo1[iSelect].checked=true;Achei=true;}
+    else iSelect++;
+  }
+}
+
+function CliValidaCampo1(){
+  var iSelect=0,Achei=false;
+  while(iSelect<document.Form1.P2CliCampo1.length && !Achei){
+    if(document.Form1.P2CliCampo1[iSelect].checked)Achei=true;
+    else iSelect++;
+  }
+  if(!Achei){alert('Favor selecionar o seu ramo de atividade: Lojista ou Revendedor.');document.Form1.P2CliCampo1[0].focus();return false;}
+  else return true;
+}
+
+</script>
