@@ -1,0 +1,35 @@
+<script language='JavaScript'>
+/*function SomenteNumero(e){
+var tecla=(window.event)?event.keyCode:e.which; 
+if((tecla>47 && tecla<58)) return true;
+else{
+if (tecla==8 || tecla==0) return true;
+else return false;
+}
+}*/
+  
+  function apenasNumeros() 
+{
+      var endereco = document.getElementById('P2EnderecoNum').value;
+
+      var end = endereco.replace(/[^a-zA-Z\s]/g,'');
+      console.log(end);
+      if (end.length > 0) {
+        alert("Este campo só aceita números");
+        document.getElementById("P2EnderecoNum").focus();
+      } 
+      else {};
+
+}
+</script>
+
+<html>
+<head>
+<title> Somente Números </title>
+</head>
+<body>
+<input type='text' size='10' value='' onkeypress='return SomenteNumero(event)'>
+<input type='text' size='10' value='' id="P2EnderecoNum">
+  <button type="submit" value="click" id="enviar" onclick="apenasNumeros()">OK</button>
+</body>
+</html>
