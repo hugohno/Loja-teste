@@ -1,0 +1,19 @@
+/* PopNews*/
+#FullBackground{position: absolute; min-width: 100%; min-height: 100%; background: #000; z-index: 99999999; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; opacity: 0.55; display: none;}
+#popup{position: fixed; top:50%; left: 50%; z-index: 999999991; background:#fff;max-width: 498px;min-height: 150px; border-radius: 5px; box-shadow: 0 0 5px 0 black; text-align: center; display: none;}
+/*#popup h1{
+    background-color: #01A7DB;
+    color: #ffffff;
+    border-radius: 20px;
+    margin-left: 29%;
+    margin-right: 29%;
+    font-size: 36px;
+    max-width: 200px;
+}*/
+#link{color:#ffffff;background-color: #01A7DB;border-radius: 20px;font-size: 36px;}
+#popup span{color:#423e3e; font-size: 13px; font-weight: bold;}
+#popup p{padding:15px;}
+.btnClose{width: auto; height:auto; display: block; padding:1px 3px 0 0; float: right; }
+.header{padding: 10px;}
+.center p{background-color:#f2f2f2;font-size: 24px;padding: 5px;}
+.footer{background-color: #01A7DB;margin-top: 10px;color: #ffffff;padding: 12px;}
