@@ -1,0 +1,65 @@
+/* CSS Grid */
+
+.FCTabDescritoresGrid table{border: 0}
+.FCTabDescritoresGrid table tr td {border: 1px solid #ccc; font-family: arial; text-align: center; padding: 3px 8px}
+
+/* classe gerada dinamicamente */
+.FCCorGrid{} 
+.FCAdicional1Grid{}
+.FCAdicional2Grid{}
+
+.FCPriceGridFC{width:100%; height:auto; min-height:40px;}
+.FCCodProdGrid{font-weight:normal}
+
+.FCGridMain #idDivGridImg{min-height:350px; padding:0px; float:left}
+.FCGridMain #idDivGridImg img{max-width:250px; max-height:250px; border:1px solid #ccc}
+
+.FCContentGrid{height:auto; position:relative; float:left; text-align: left !important;}
+/****/
+.FCGridMain .FCDescritorGrid{min-width: 30px; min-height:30px; display: block; text-align: center; border: 1px solid #dddddd; padding: 5px; margin: 0}
+
+.FCBoxGrid{position: relative; width:100%; height:auto !important; display: table; border: 1px solid #ccc; padding: 5px; margin-bottom:5px}
+.FCDescritorGridDisabled .FCDescritorGrid{background: #ddd; color: #686868; cursor:not-allowed}
+.FCSelectedGrid{border-color: #5c60b4; background:#3e98e4; /*background: #090*/}
+.FCSelectedGrid span{background:#ddd}
+.FCStepGrid{min-height:40px; display: block; text-align: left; border: 0; padding:5px 0; font-size:14px}
+.FCStepGridNumber{display: inline-block; float:left; padding:3px 6px; border-radius:50%; background:#4494f9; color:#fff}
+.FCOptionSelected{display: inline-block;font-weight:bold}
+.FCStepGridTitle{display: inline-block; padding:2px 0; float:left; margin:0 5px}
+.FCStepGridTitle.FCTitQtyInc{margin-left:5px}
+
+.FCSoldOutLabel span{background:#eee; color:#ccc}
+.FCSoldOutLabel .FCFlagEsgotadoGrid{width: 18px; position: absolute; margin: 15px 0 0 -5px; background: #e17600; font-size: 11px; color: #fff; line-height: 12px; padding: 0px; border: 2px solid #ccc; border-radius: 8px; float: right; height: 18px; text-align: center !important; z-index:1}
+.FCSoldOutLabel:hover{border-color:#f56217 !important}
+
+.FCBoxGrid.FCResumeProduct{ padding:10px 0 !important}
+
+.FCDescritorGridActivated{cursor: pointer;}
+.FCDescritorGridActivated:hover{border-color:#3e98e4}
+
+.FCCheckedGrid{width:16px; height:16px; position:absolute; background:url('../../images/checked.svg') no-repeat; z-index:1; margin: -10% 0 0 70%; display:none}
+.FCSelectedGrid .FCCheckedGrid{display:block}
+.FCGridBtnZoom{width:160px; background:#ccc; display:block; padding:7px 0; text-align: center; font-size: 12px; margin: 5px auto; border-radius:5px}
+
+.FCBtnEsgotadoGrid, .FCBtnConsultenos, .FCBtnComprarGrid, .FCBtnSelecioneGrid{max-width:300px; height:auto; position: relative; text-align:center; font-size:14px; font-weight:normal; cursor:pointer; margin:5px 0; padding: 5px 0; border-radius:5px;}
+.FCBtnEsgotadoGrid span{color:#ee4c1a}
+.FCBtnEsgotadoGrid span:hover{color:#ff0000}
+.FCBtnConsultenos{}
+.FCBtnComprarGrid{}
+.FCBtnSelecioneGrid{}
+
+.FCDescritorContent{width:100%; height:auto; display: table; float:left; list-style: none;}
+.FCDescritorContent li{height: 34px; position: relative; float:left;border: 2px solid transparent; margin:2px}
+.FCDescritorContent li:hover{}
+
+/*Tooltip*/
+.FCTooltipGrid{display:none; position: absolute; width: 361px; top: 55px; left: 0px; font-size: 14px; padding: 10px 5px; border: 1px solid #999; background: none repeat scroll 0% 0% #FFFFFF; color: #000; margin: 0 auto !important; border-radius: 4px;}
+
+/*incMult*/
+.QTIncMultGrid{min-width:40px}
+
+/*descritores*/
+.FCTxtGrid{width:100%; height:auto; position:relative; margin-bottom:10px;}
+.FCGridAdicContent span{display:inline-block; padding:5px;}
+.AdicItemCor{min-width:20px; display:inline-block; margin:0 3px; border:1px solid #ccc}
+.FCGridAdicContent.FCGridAdicProductList{float:left}
