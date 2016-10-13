@@ -1,0 +1,93 @@
+<!-- Footer -->
+<table width="100%" border="0">
+  <tr>
+    <td class="TitRodapeF" height="35">&nbsp;Informações</td>
+    <td width="2"></td>
+    <td class="TitRodapeF" height="35">&nbsp;Produtos</td>
+  </tr>
+  <tr>
+    <td valign="top">
+	<table>
+		<tr>
+			<td><a href="ajuda.asp?IDLoja=<IDLojanum>" id="LinkRodHome" class="RodapeMenuNormal">Ajuda</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.rumo.com.br/cadastro.asp?IDLoja=<idlojanum>" id="LinkRodHome" class="RodapeMenuNormal">Cadastro</a></td>
+		</tr>
+		<tr>
+			<td><a href="faleconosco.asp?IDLoja=<IDLojanum>" id="LinkRodHome" class="RodapeMenuNormal">Contato</a></td>
+		</tr>
+		<tr>
+			<td><a href="addProduto.asp?IDLoja=<IDLojaNum>" id="LinkRodPedido" class="RodapeMenuNormal">Seu pedido</a></td>
+		</tr>
+	</table>
+    </td>
+    <td width="2"></td>
+    <td valign="top">
+	<table>
+		<tr>
+			<td><a href="categorias.asp?IDLoja=<idlojanum>" id="LinkRodLanc" class="RodapeMenuNormal">Categorias</a></td>
+		</tr>
+		<tr>
+			<td><a href="/prod,idloja,<IDLojaNum>,lancamento,true" id="LinkRodLanc" class="RodapeMenuNormal">Lançamentos</a></td>
+		</tr>
+		<tr>
+			<td><a href="/prod,idloja,<IDLojaNum>,promocao,true" id="LinkRodProm" class="RodapeMenuNormal">Promoções</a></td>
+		</tr>
+	</table>
+    </td>
+  </tr>
+</table>
+<br /><br />
+<!-- Categorias -->
+<table width="100%">
+	<tr>
+		<td class="MbsSelect"><ListCat></td>
+	</tr>
+</table>
+<br /><br />
+<!-- Copyright -->
+<table width="100%" class="BackgroundCopyRight">
+	<tr>
+		<td align="center">Copyright © LayoutDemo1 <br />Todos os direitos reservados</td>
+	</tr>
+</table>
+<!-- Social media -->
+<table border="0" width="100%">
+	<tr>
+		<td align="right"><table id="IconesRedesSociais_Rodape"><tr><td></td><td><ShareFacebook></td><td><ShareTwitter></td><td><ShareOrkut></td></tr></table></td>
+	</tr>
+</table>
+
+<style type="text/css">
+.EstPassosCompra{display:none;}
+.NotaOpiniaoVazio{width:15px;height:15px;background-image:url(<BaseLoja>/images/MbbNotaOff.png)}
+.NotaOpiniaoMeio{width:15px;height:15px;background-image:url(<BaseLoja>/images/MbbNotaHalf.png)}
+.NotaOpiniaoCheio{width:15px;height:15px;background-image:url(<BaseLoja>/images/MbbNotaOn.png)}
+</style>
+<script src="<BaseLoja>htm/MbhFormAjust.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+//Cat
+document.getElementById('idListCatFC').style.width='100%';
+var selCat=document.getElementById('IDSelCategoria');
+selCat.options[0].text='<Categorias>';
+selCat.style.width='100%';
+if(sPag.indexOf("IDCATEGORIA")<=0)selCat.selectedIndex=0;
+function VaiParaPagina(sPag){location.href=sPag;}
+
+//Exibe quantidade e valor da cesta no design
+var QtdCesta="<QtdCesta>";
+var ValorCesta= <ValorCesta>;
+MostraDadosCestaX();
+
+// ICSocialMedia
+var sRodapeContent=document.getElementById("IconesRedesSociais_Rodape");
+if(sRodapeContent)var aImgsShare=sRodapeContent.getElementsByTagName('img');
+if(aImgsShare)
+  for(var i=0;i<aImgsShare.length;i++){
+    if(aImgsShare[i].className=='EstImgShareFacebook')aImgsShare[i].src='<BaseLoja>images/IcFacebook.png';
+    if(aImgsShare[i].className=='EstImgShareOrkut')aImgsShare[i].src='<BaseLoja>images/IcOrkut.png';
+    if(aImgsShare[i].className=='EstImgShareTwitter')aImgsShare[i].src='<BaseLoja>images/IcTwitter.png';
+}
+</script>
