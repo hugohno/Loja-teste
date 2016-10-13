@@ -1,0 +1,78 @@
+<p255>
+<div class="DivHomeProd">
+  <a href="#" onclick="NoCascate('<URLProd>');">
+    <FormProd><span id="desc_<IDProduto>"></span>
+  <div class="DivHomeImagemProd"><ImagemProd></div>
+  <div class="DivIntHomeProd"> 
+    <div class="DivHomeNomeProd">
+      <span class="HomeNomeProd text-overflow font-16"><NomeProd></span>
+    </div>
+    <div class="DivHomePriceProd" style="white-space:nowrap;">
+      <!--div><PrecoSimples></div-->
+      <div id="idProdPrice<IDProduto>"><script>sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>',<MaxParcelasProdNum>,<IDProduto>);</script></div> 
+      <div class="PriceAVistaLista"><script>sF$.fnShowParcels(<PrecoNum>,<MaxParcelasProdNum>);</script><br><script>sF$.fnMostraDescontoHome(<PrecoNum>);</script></div>
+      </a>
+    </div>
+      <div>          <script type="text/javascript">
+            iQtdOp=<OpiniaoQtd>;
+            if(iQtdOp==0){document.write("<div class='ProductStyleReviewOffBoxFC'><div class='NotaOpiniaoVazio NotaOpiniaoVazio1'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio2'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio3'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio4'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio5'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio6'></div></div>")}
+            else {document.write("<div class='ProductStyleReviewOnBoxFC'><div class='ProductStyleReviewStarsOnFC'><OpiniaoMedia></div><div class='ProductStyleReviewQtyOnFC'>(<a href='#OP' style='text-decoration:none;'><OpiniaoQtd></a>)</div></div>")}
+          </script></div>
+      <div class="Two">
+    <div class="BuyHome"><LinkComprar></div>
+    <div class="DivHomeDetails"><a href="<URLProd>">Detalhes</a></div>
+        </div>
+  </div>
+  </FormProd>
+</div>
+<script>
+ var Pprom = parseFloat(<PrecoNum>);
+ var Porig = parseFloat(<PrecoOri>);
+ if (Porig != Pprom) {
+ var dif = ((Pprom * 100) / Porig).toFixed(2);
+   
+  document.getElementById('desc_<IDProduto>').innerHTML = "<p style='color: #FFffff;font-weight: bold;background-color: #FF4500;padding: 6px;max-width: 75px;float: right;font-size: 14px;'> -" + dif + "% </p>";
+ };
+</script>
+</p255>
+
+
+<p200>
+      <div class="DivHomeProdDest">
+        <div class="DivIntHomeProdDest"> 
+          <div class="DivHomeNomeProdDest"><a href="/prod,idloja,<IDLojaNum>,idproduto,<IDProduto>,<NomeProdUA>"><span class="HomeNomeProdDest"><NomeProd></span></a></div>
+          <div class="DivHomePriceProdDest"><div id="idProdPrice<IDProduto>"><script>sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>',<MaxParcelasProdNum>,<IDProduto>);</script></div></div>
+        </div> 
+        <div class="DivHomeImagemProdDest"><a href="/prod,idloja,<IDLojaNum>,idproduto,<IDProduto>,<NomeProdUA>"><ImagemDet></a></div>
+      </div>
+</p200>
+
+<p194>
+  <div class="DivProdHome">
+    <div class="ProdImgHome"><a href="/prod,idloja,<IDLojaNum>,idproduto,<IDProduto>,<NomeProdUA>"><ImagemProd><a/></div>
+    <div class="ProdNomeHome"><a href="/prod,idloja,<idlojanum>,idproduto,<IDProduto>,<NomeProdUA>"><NomeProd></a></div>
+    <div class="ProdPriceHome"><Preco></div>
+    <div class="ProdCompraHome"><center><FormProd><LinkComprar></FormProd></center></div>
+    <div class="ProdEstoqueHome">Quantidade disponível:&nbsp<b><Estoque></b></div>
+    <a href="/prod,idloja,<IDLojaNum>,idproduto,<IDProduto>,<NomeProdUA>"><div class="ProdDetHome"><b>Detalhes</b></div>
+  </div></a>
+    </p194>
+<p196>
+  <div class="DivProdHomeL">
+    <div class="ProdImgHomeL"><a href="/prod,idloja,<IDLojaNum>,idproduto,<IDProduto>,<NomeProdUA>"><ImagemProd><a/></div>
+    <div class="ProdNomeHomeL"><a href="/prod,idloja,<idlojanum>,idproduto,<IDProduto>,<NomeProdUA>"><NomeProd></a></div>
+    <div class="ProdPriceHomeL"><Preco></div>
+    <div class="ProdCompraHomeL"><center><FormProd><LinkComprar></FormProd></center></div>
+    <div class="ProdEstoqueHomeL">Quantidade disponível:&nbsp<b><Estoque></b></div>
+    <a href="/prod,idloja,<IDLojaNum>,idproduto,<IDProduto>,<NomeProdUA>"><div class="ProdDetHomeL"><b>Detalhes</b></div></a>
+  </div>
+</p196>
+    
+<p195>
+  <div class="DivProdHomeR">
+    <div class="ProdImgHomeR"><a href="/prod,idloja,<IDLojaNum>,idproduto,<IDProduto>,<NomeProdUA>"><ImagemProd><a/></div>
+    <div class="ProdNomeHomeR"><a href="/prod,idloja,<idlojanum>,idproduto,<IDProduto>,<NomeProdUA>"><NomeProd></a></div>
+    <div class="ProdPriceHomeR"><Preco></div>
+    <div class="ProdCompraHomeR"><center><FormProd><LinkComprar></FormProd></center></div>
+    <a href="#Spy" onclick='bCascate=true;FCLib$.OpenRWD("/listaprodutos.asp?idloja=<IDLoja>&sty=9&int=1&idproduto=<IDProduto>","Disp","width=700,height=700")'><div class="ProdSpyHomeR"><b>Espiar</b></div></a>
+</p195>
