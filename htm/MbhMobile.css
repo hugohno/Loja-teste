@@ -1,0 +1,25 @@
+
+#title{padding-left:10px;padding-right:10px;text-align:center;height:44px;line-height:44px;font-weight:bold;color:rgb(255,255,255);font-size:16pt;z-index:0;text-decoration:none;}
+#topbar{text-align:center;position:relative;left:0;top:0;height:44px;background-image:url('../images/MbbFundoTop.png');background-repeat:repeat;}
+
+#TopSearch ul{background-color:#f0f0f0;list-style-type:none;text-align:center;margin: 0px 0px 0px 0px;padding: 5px 0px 5px 0px}
+#TopSearch ul li{display:inline}
+
+.menu{-webkit-border-bottom-left-radius:8px 8px;-webkit-border-bottom-right-radius:8px 8px;-webkit-border-top-left-radius:8px 8px;-webkit-border-top-right-radius:8px 8px;-webkit-margin-bottom-collapse:separate;-webkit-margin-top-collapse:separate;background-color:#ccd3dd;border:rgb(135,135,135) solid 1px;font-size:12pt;margin-bottom:17px;margin-left:9px;margin-right:9px;overflow:hidden;padding:0;position:relative;display:block;height:auto;width:auto;margin-top:3px}
+ul.menu li{position:relative;list-style-type:none;display:block;height:43px;overflow:hidden;border-top-width:1px;border-top-style:solid;border-top-color:rgb(135,135,135);-webkit-margin-top-collapse:separate;width:auto}
+ul.menu li:first-child{border-top:0}
+ul.menu li a{display:block;height:43px;overflow:hidden;-webkit-margin-top-collapse:separate;width:auto;text-decoration:none}
+ul.menu li:hover{background-image:url('../images/MbbFundoMenu.png');background-repeat:repeat-x;background-color:#77b9f0}
+ul.menu li:first-child:hover{background-image:url('../images/MbbFundoMenu.png');background-repeat:repeat-x;-webkit-border-top-left-radius:8px 8px;-webkit-border-top-right-radius:8px 8px}
+ul.menu li:last-child:hover{background-image:url('../images/MbbFundoMenu.png');background-repeat:repeat-x;-webkit-border-bottom-left-radius:8px 8px;-webkit-border-bottom-right-radius:8px 8px}
+.menuname{margin-left:7px;margin-top:11px;width:auto;color:#000;font-weight:bold;font-size:17px;text-overflow:ellipsis;overflow:hidden;max-width:75%;white-space:nowrap;float:left}
+ul.menu span.arrow,body.musiclist span.arrow,body.list span.arrow{position:absolute;width:8px;height:13px;right:10px;top:15px;background:url(../images/MbbNext.png) no-repeat}
+ul.menu li a img{border:0px;width:auto;height:32px;margin-top:5px;margin-left:5px;float:left}
+
+.ProdOut{-webkit-border-bottom-left-radius:8px 8px;-webkit-border-bottom-right-radius:8px 8px;-webkit-border-top-left-radius:8px 8px;-webkit-border-top-right-radius:8px 8px;-webkit-margin-bottom-collapse:separate;-webkit-margin-top-collapse:separate;background-color:#FFFFFF;border:rgb(135,135,135) solid 1px;font-size:12pt;margin-bottom:9px;margin-left:9px;margin-right:9px;overflow:hidden;padding:0;position:relative;display:block;height:auto;width:auto;margin-top:0px}
+ul.ProdOut li{position:relative;list-style-type:none;display:block;height:143px;overflow:hidden;border-top-width:0px;border-top-style:solid;border-top-color:rgb(135,135,135);-webkit-margin-top-collapse:separate;width:auto}
+ul.ProdOut li:first-child{border-top:0}
+ul.ProdOut li a{display:block;overflow:hidden;-webkit-margin-top-collapse:separate;width:auto;text-decoration:none}
+ul.ProdOut li:hover{background-image:url('../images/MbbFundoProd.png');background-repeat:repeat-x;background-color:#ffe5a9}
+ul.ProdOut li:first-child:hover{background-image:url('../images/MbbFundoProd.png');background-repeat:repeat-x;-webkit-border-top-left-radius:8px 8px;-webkit-border-top-right-radius:8px 8px}
+ul.ProdOut li:last-child:hover{background-image:url('../images/MbbFundoProd.png');background-repeat:repeat-x;-webkit-border-bottom-left-radius:8px 8px;-webkit-border-bottom-right-radius:8px 8px}
