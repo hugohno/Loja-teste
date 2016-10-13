@@ -1,0 +1,123 @@
+<html>
+<head>
+  <title>Gerador de código de Ajuda</title>
+</head>
+<body>
+  <form name="gerador">
+    <table> 
+
+      <tr>
+        <td>Selecione as formas de Pagamento que você utiliza:</td>
+      </tr>
+      <tr>
+        <td>Boleto bancário</td>
+        <td><input type="checkbox" id="BB" /></td>
+      </tr> 
+      <tr>
+        <td>Cartões de crédito</td>
+        <td><input type="checkbox" id="CD" /></td>
+      </tr> 
+      <tr>
+        <td>Depósito bancário</td>
+        <td><input type="checkbox" id="DB" /></td>
+      </tr> 
+      <tr>
+        <td>MercadoPago</td>
+        <td><input type="checkbox" id="MP" /></td>
+      </tr>
+      <tr>
+        <td>Moip</td>
+        <td><input type="checkbox" id="M" /></td>
+      </tr> 
+      <tr>
+        <td>PayPal</td>
+        <td><input type="checkbox" id="PP" /></td>
+      </tr> 
+      <tr>
+        <td>PagSeguro</td>
+        <td><input type="checkbox" id="PS" /></td>
+      </tr>  
+    </table>
+  <input type="button" value="Gerar Código" onclick="Gerador_Ajuda()" >
+  <input type="button" value="Limpar Código" onclick="Limpa_Ajuda()" >
+  </form>
+
+<div style="width:100%; height:100%; background-color:#D3D3D3;" id="block_cod">
+<div id="topo">
+
+</div>
+
+<div id="boleto">
+
+</div>
+
+<div id="cartao">
+
+</div>
+
+<div id="rodape">
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+function Gerador_Ajuda(){
+
+ document.getElementById('topo').innerHTML = "";
+
+if (document.getElementById("BB").checked == true) {
+
+document.getElementById('boleto').innerHTML = "Boleto bancário &lt;ImagemProdDet>";
+
+
+}
+
+if (document.getElementById("CD").checked == true) {
+
+document.getElementById('cartao').innerHTML = "Cartão de crédito"
+
+}
+
+/*else{
+
+  alert("Nenhuma opção selecionada");
+}*/
+
+document.getElementById('rodape').innerHTML="Final do texto de ajuda";
+
+
+
+}
+
+</script>  
+<script type="text/javascript">
+function Limpa_Ajuda(){
+
+  document.getElementById('block_cod').innerHTML =
+'<div id="topo">'+
+
+'</div>'+
+
+'<div id="boleto">'+
+
+'</div>'+
+
+'<div id="cartao">'+
+
+'</div>'+
+
+'<div id="rodape">'+
+
+'</div>';
+}
+</script>
+
+<script>function fnGetAjax(element, file){  var getHTTPObject=function(){if(window.XMLHttpRequest){return new XMLHttpRequest()}else if(window.ActiveXObject){return new ActiveXObject("Microsoft.XMLHTTP")}else{return null}}; var xmlHttp=getHTTPObject();if(xmlHttp!==null){xmlHttp.open("GET",FC$.PathHtm+file,true); xmlHttp.onreadystatechange=function(){if(xmlHttp.readyState==4){document.querySelector(element).innerHTML=xmlHttp.responseText;}};xmlHttp.send( null );}}</script>
+
+<div id="topo"></div>
+<script>fnGetAjax('#topo', '/Topo_Ajuda.htm')</script>
+
+
+</body>
+</html>
