@@ -1,0 +1,29 @@
+<select name=P2CliCampo2 id=P2CliCampo2 size=1 class=smSelect>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2');" value=''>Selecione</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2');" value=Cirurgião-dentista>Cirurgião-dentista</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2');" value=Cirurgiã-dentista>Cirurgiã-dentista</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2);" value=Estudante de Odontologia>Estudante de Odontologia</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2);" value=Técnico(a) em protese dentária>Técnico(a) em protese dentária</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2);" value=Auxiliar em Saúde Bucal>Auxiliar em Saúde Bucal</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2);" value=Estudante em Auxiliar em Saúde Bucal>Estudante em Auxiliar em Saúde Bucal</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2);" value=Técnico(a) em Saúde Bucal>Técnico(a) em Saúde Bucal</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2);" value=Estudante Técnico(a) em Saúde Bucal>Estudante Técnico(a) em Saúde Bucal</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2);" value=Técnico(a) em Radiologia>Técnico(a) em Radiologia</option>
+      <option onchange="F$.fnCleanErrField('P2CliCampo2);" value=Estudante Técnico(a) em Radiologia>Estudante Técnico(a) em Radiologia</option>
+</select>
+<div id=idErrFieldP2CliCampo2FC style="display:none" class=EstErrField><span id=idTxtErrFieldP2CliCampo2FC class=EstTxtErrField></span></div>
+
+<script>
+var ErrCliCampo2=0;
+function CliValidaCampo2(){
+  if(document.Form1.P2CliCampo2.selectedIndex==0){
+    oP2CliCampo2=F$.GetID('P2CliCampo2');
+    ErrCliCampo2++;
+    if(ErrCliCampo2==1)F$.fnShowErrField(oP2CliCampo2,"Selecione uma Profissão.");
+    else alert("O campo Profissão é obrigatório.");
+    document.Form1.P2CliCampo2[0].focus();
+    return false;
+}
+  else return true;
+}
+</script>
