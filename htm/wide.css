@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif; }
+
+.grid, .small-grid {
+  margin: 0 auto;
+  max-width: 1260px;
+  padding: 0 4%;
+  font-family: Layout; }
+  .grid > *, .small-grid > * {
+    font-family: sans-serif; }
+
+.small-grid {
+  max-width: 1008px; }
+
+.gallery header {
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2); }
+
+.gallery .custom-controls header {
+  padding: 0 15%;
+  font-size: 1.5em; }
+
+.gallery .secondary-controls a:nth-child(1) {
+  margin-left: 1em; }
+.gallery .secondary-controls a:nth-child(2) {
+  margin-right: 1em; }
+
+.gallery .introduction h1 {
+  font-size: 5em; }
+.gallery .introduction h2 {
+  font-size: 2em; }
+
+.main-module h1 {
+  font-size: 3em; }
+
+.main-module h2 {
+  font-size: 1.6em; }
+
+.getting-started .steps {
+  max-width: 60%; }
+
+.download-options .unprefixed img {
+  margin-left: -2em; }
+.download-options .prefixed,
+.download-options .unprefixed {
+  width: 50%;
+  float: left; }
+
+.screencast .learnings {
+  margin-top: 3em;
+  margin-bottom: 3em; }
+
+.screencast .learnings li {
+  width: 25%; }
+
+.screencast footer {
+  padding-top: 5em; }
+
+.quotes {
+  width: 50%;
+  float: left; }
+
+.purchase {
+  float: right;
+  max-width: 50%; }
