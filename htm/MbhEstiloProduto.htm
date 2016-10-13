@@ -1,0 +1,252 @@
+// FastCommerce - MbhEstiloProduto.htm
+<ProdTop>
+<style type="text/css">
+.TitTabParc{font-weight:bold;font-size:10px;font-family:tahoma,arial}
+.EstParcPar{background:#F8F8F8;font-size:10px;font-family:tahoma,verdana}
+.EstParcImpar{background:#FFFFFF;font-size:10px;font-family:tahoma,verdana}
+body {font-size:12px;font-family:tahoma,verdana;background:#ffffff}
+#idDivPagProd, #idDivOrder, #idDivPath, #idDivSearch {margin-top:15px;width:97%;border-style:solid;border-width:1px;border-color:#ffffff;}
+#idUlPathSearchFC {margin-left:10px;font-size:10px;}
+#idUlPathSearchFC li{font-size:10px;}
+#idUlPathSearchFC #idPathSearchTextInputFC{width:95px;background-color:#fcfcfc;font-size:12px;}
+#idLinkAdvancedSearchFC {text-decoration:none;font-size:10px;}
+#idLinkAdvancedSearchFC:hover{text-decoration:underline;color:#333333;}
+.EstTitQts {font-family:tahoma;font-size:10px;background-color:#eaeaea;padding:5px;}
+.EstDivQts{height:100%;border-style:solid;border-width:1px;border-color:#d0d0d0;}
+#idSelPathCatQtFC, #idSelAdic1QtFC, #idSelAdic2QtFC, #idSelAdic3QtFC {width:100%;}
+#idUlPathCatQtFC li,#idUlAdic1QtFC li,#idUlAdic2QtFC li,#idUlAdic3QtFC li{list-style-type:none;font-size:10px;margin:5px 10px 3px 5px}
+.EstTabFiltersExt{background-color:#ebebeb;height:28px;font-family:tahoma;font-size:10px;}
+.EstTabFiltersInt{background-color:#f7f7f7;}
+</style>
+<JurosParcelas>
+
+<div id="idDivPath">
+  <table width="100%" class="EstTabFiltersExt"><tr><td>
+    <table><tr>
+      <td>&nbsp;&nbsp;&nbsp;Filtros da busca:</td>
+      <td>
+        <span id="idSpanShow"><a href="#Show" onClick="ToggleIDs('idSpanHide','idSpanShow');document.getElementById('idTablePathQtsFC').style.display='';"><img src="<BaseLoja>images/IcShow.png" border="0" alt="exibir filtros" /></a></span>
+        <span id="idSpanHide" style="display:none;"><a href="#Hide" onClick="ToggleIDs('idSpanShow','idSpanHide');document.getElementById('idTablePathQtsFC').style.display='none';"><img src="<BaseLoja>images/IcHide.png" border="0" alt="esconder filtros" /></a></span>
+      </td>
+    </tr></table>
+  </td></tr></table>
+  <table id="idTablePathQtsFC" class="EstTabFiltersInt" style="display:none;" width="100%">
+    <tr>
+      <td width="25%" valign="top" id="idListaProdCategoriasFC"><div class="EstTitQts">&nbsp;<LegendaCats></div><ListPathCatQt></td>
+      <td width="25%" valign="top" id="idListaProdAdicional1FC"><div class="EstTitQts">&nbsp;<NomeAdicional1></div><ListAdic1Qt></td>
+      <td width="25%" valign="top" id="idListaProdAdicional2FC"><div class="EstTitQts">&nbsp;<NomeAdicional2></div><ListAdic2Qt></td>
+      <td width="25%" valign="top" id="idListaProdAdicional3FC"><div class="EstTitQts">&nbsp;<NomeAdicional3></div><ListAdic3Qt></td>
+    </tr>
+  </table>
+</div>
+
+<div id="idDivSearch">
+  <table width="100%" class="EstTabFiltersExt"><tr><td>&nbsp;&nbsp;&nbsp;Filtrando por</td><td id="idTDLinkAdvancedSearchFC" width="130" nowrap="nowrap"></td></tr></table>
+  <table id="idTablePathSearchFC" width="100%" height="40" class="EstTabFiltersInt"><tr><td><ListPathSearch></td></tr></table>
+</div>
+
+<script>
+AjustaFiltros();
+var iQtdProds=<QtProd>;
+</script>
+<div id="idPagProdTop"><br /></div>
+</ProdTop>
+
+<ProdLista>
+<div id=idProdListaMobileFC>
+<ul class="ProdOut">
+  <li>
+	<hr />
+	<table width="100%" border="0">
+		<tr>
+			<td colspan="2"><a href='ListaProdutos.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>' class="EstNomeProdLista"><NomeProd></a></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="EstRefProd">Cod: <CodProd> - Cat: <NomeCat></td>
+		</tr>
+		<tr>
+			<td rowspan="3" width="100" valign="top"><div class="MbsImageLista"><ImagemProd></div></td>
+			<td><script type="text/javascript">if(<OpiniaoQtd>>0){document.write("<table><tr><td><OpiniaoMedia></td></tr></table>")}else{document.write("<a href='Opiniao.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>' class='EstRefProd'>Avalie o produto</a>");}</script></td>
+		</tr>
+		<tr>
+			<td class="EstPrecoProdCapa"><Preco><script type="text/javascript">MostraEconomia(<PrecoNum>,<PrecoOri>);</script></td>
+		</tr>
+		<tr>
+			<td><FormProd><LinkComprar></FormProd></td>
+		</tr>
+	</table>
+  </li>
+</ul>
+</div>
+</ProdLista>
+
+
+<ProdDet>
+<style type="text/css">
+body {font-size:12px;font-family:tahoma,verdana;background:#ffffff}
+</style>
+<div id="idProdDetMobileFC">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="EstNomeProd"><NomeProd></td>
+    <td rowspan="3" width="20"><Lancamento></td>
+  </tr>
+  <tr>
+    <td class="EstRefProd">Cod: <CodProd> - Cat: <NomeCat></td>
+  </tr>
+  <tr>
+    <td class="EstPrecoProdDet"><PrecoSimples><script type="text/javascript">MostraEconomia(<PrecoNum>,<PrecoOri>);</script></td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%" border="0">
+      <tr>
+        <td rowspan="3" valign="top" width="200"><div class="MbsImageDet"><a href="<ImagemProdAmp>" rel="zoom-position:inner;zoom-fade:true;hint:false" class="MagicZoom"><img src="<ImagemProdDet>"/></div></a></td>
+        <td><script type="text/javascript">if(<OpiniaoQtd>>0){document.write("<table><tr><td><OpiniaoMedia></td></tr></table>")}else{document.write("<a href='Opiniao.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>' class=EstRefProd>Avalie o produto</a>");}</script></td>
+      </tr>
+      <tr>
+        <td><FormProd><LinkComprar></td>
+      </tr>
+      <tr>
+        <td valign="top">
+	<table name="Tab1Adic<IDProduto>" cellpadding="0" cellspacing="0">
+		<tr><td nowrap="nowrap"><Adicional1></td></tr>
+		<tr><td nowrap="nowrap"><Adicional2></td></tr>
+		<tr><td nowrap="nowrap"><Adicional3></td></tr>
+		<tr><td nowrap="nowrap"><AdicionalD1></td></tr>
+		<tr><td nowrap="nowrap"><AdicionalD2></td></tr>
+		<tr><td nowrap="nowrap"><AdicionalD3></td></tr>
+		<tr><td nowrap="nowrap"><Peso></td></tr>
+		<tr><td nowrap="nowrap"><Cor></FormProd></td></tr>
+	</table>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+	<table class="MbsSocialMedia">
+		<tr>
+		<td width=60 align=center><Facebook type="like" layout="box_count"></td>
+		<td width=60><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="FastCommerceBR">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></td>
+		<td width=60 align=center><GooglePlusOne size="tall"></td>
+          <td><span class="ShareWhatsApp"><a href="whatsapp://send?text=Veja o produto: <NomeProd> / Link: http://hugoteste2.lojavirtualfct.com.br/p<IDProduto>" target="_blank"><img src="<BaseLoja>images/IcWhatsApp.svg" width="35" height="35" border="0" alt="Recomende este produto pelo WhatsApp" title="Recomende este produto pelo WhatsApp"></a></span></td>
+      </tr>
+	</table><br />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+	<!-- Zip Code -->
+	<table border="0" width="300" cellpadding="0" cellspacing="0" class="ZipBackground">
+		<tr>
+			<td width="25" align="center"><img src="<BaseLoja>images/IcZipBox.png" width="25" height="25" alt="Zip box" /></td>
+			<td class="ZipTitCalc" align="left" width="100%">&nbsp;Calcule o valor do CEP:</td>
+		</tr>
+		<tr>
+			<form action="javascript:GetShippingValues(<IDProduto>,<IDProduto>)">
+				<td align="left" valign="top" colspan="2">
+					<table>
+						<tr>
+							<td class="ZipTitType">CEP:</td>
+							<td><input type="text" id="idZip<IDProduto>" size="7" maxlength="9" class="ZipInputButton"></td>
+							<td><input type="submit" value="Calcular" class="ZipSubmitButton"></td>
+						</tr>
+					</table>			
+				</td>
+			</form>
+		</tr>
+		<tr>
+			<td colspan="2"><div id="idShippingValues<IDProduto>"></div></td>
+		</tr>
+	</table><br />
+    </td>
+  <tr>
+  <tr>
+    <td colspan="2"><Descricao></td>
+  <tr>
+</table>
+<!-- SUB Prod Det -->
+<sub>
+<FormProd>
+<table width="100%" border="0">
+  <tr align="right">
+    <td width="1">&nbsp;</td>
+    <td class="EstLinhaProdSub"></td>
+  </tr>
+  <tr>
+    <td width="1">&nbsp;</td>
+    <td align="right"><Lancamento></td>
+  </tr>
+  <tr>
+	<td width="1">&nbsp;</td>
+	<td>
+		<table width="100%" border="0">
+		  <tr>
+		    <td rowspan="6" align="center"></td>
+		    <td class="EstRefProdSub"><NomeProd> <CodProd></td>
+		    <td rowspan="6" width="138"><LinkComprar></td>
+		  </tr>
+		  <tr>
+		    <td class="EstRefProdSub"><NomeCat></td>
+		  </tr>
+		  <tr>
+		    <td class="EstDescrProd"><Descricao></td>
+		  </tr>
+		  <tr>
+		    <td class="EstPrecoProd"><PrecoSimples> <script type="text/javascript">MostraMaxParcela(<PrecoNum>,<MaxParcelasProdNum>);</script></td>
+		  </tr>
+		  <tr>
+		    <td>&nbsp;</td>
+		  </tr>
+		  <tr>
+		    <td>
+			<table name="TabAdicionaisSub<IDProduto>" cellpadding="0" cellspacing="0">
+			        <tr><td>&nbsp;</td></tr>
+			        <tr>
+			          <td>
+			            <table name="Tab1Adic<IDProduto>" cellpadding="0" cellspacing="0">
+			              <tr>
+			                <td nowrap="nowrap"><Adicional1></td>
+			                <td nowrap="nowrap"><Adicional2></td>
+			                <td nowrap="nowrap"><Adicional3></td>
+			              </tr>
+			            </table>
+			          </td>
+			        </tr>
+			        <tr>
+			          <td>
+			            <table name="Tab2Adic<IDProduto>" cellpadding="0" cellspacing="0">
+			              <tr>
+			                <td nowrap="nowrap"><Cor></td>
+			                <td nowrap="nowrap"><AdicionalD1></td>
+			                <td nowrap="nowrap"><AdicionalD2></td>
+			                <td nowrap="nowrap"><AdicionalD3></td>
+			                <td nowrap="nowrap"><Peso></td>
+			              </tr>
+			            </table>
+			          </td>
+			        </tr>
+			</table>
+		    </td>
+		  </tr>
+		</table>
+	</td>
+  </tr>
+</table>
+</FormProd>
+</sub>
+</div>
+<CrossSelling>
+</ProdDet>
+
+<ProdAmp>
+<div id="idProdAmpMobileFC" align="center"><ImagemProd></div>
+<style type="text/css">#idProdAmpMobileFC .EstImgFC{width:300px;}</style>
+</ProdAmp>
+
+<ProdBottom>
+<script type="text/javascript">
+    try{document.getElementById("idFoundFC").style.padding='0px 0px 15px 10px';}catch(e){}
+    try{document.getElementById("idPageCountFC").style.padding='0px 0px 15px 0px';}catch(e){}
+</script>
+</ProdBottom>
