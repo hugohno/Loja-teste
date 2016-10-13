@@ -1,0 +1,81 @@
+<html>
+<head>
+<script language="JavaScript">
+
+var NS4 = (document.layers);    
+var IE4 = (document.all);
+
+var win = window;    
+var n   = 0;
+
+function findInPage(str) {
+
+  var txt, i, found;
+
+  if (str == "")
+    return false;
+
+  if (NS4) {
+
+    if (!win.find(str))
+      while(win.find(str, false, true))
+        n++;
+    else
+      n++;
+
+    if (n == 0)
+      alert("Não foram encontrados resultados para sua pesquisa. \n Tente reduzir ou modificar suas palavras-chaves.");
+  }
+
+  if (IE4) {
+    txt = win.document.body.createTextRange();
+
+    for (i = 0; i <= n && (found = txt.findText(str)) != false; i++) {
+      txt.moveStart("character", 1);
+      txt.moveEnd("textedit");
+    }
+
+    if (found) {
+      txt.moveStart("character", -1);
+      txt.findText(str);
+      txt.select();
+      txt.scrollIntoView();
+      n++;
+    }
+
+    else {
+      if (n > 0) {
+        n = 0;
+        findInPage(str);
+      }
+
+      else
+        alert("Não foram encontrados resultados para sua pesquisa. \n Tente reduzir ou modificar suas palavras-chaves.");
+    }
+  }
+
+  return false;
+}
+
+</script>
+</head>
+<body>
+<form name="search" onSubmit="return findInPage(this.string.value);">
+<font size=3><input name="string" type="text" size=15 onChange="n = 0;"></font>
+<input type="submit" value="Pesquisar no site">
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<font face="Verdana" size="2">
+
+<!--INICIO DO BANCO DE DADOS-->
+<a href="macaco.html">Tudo sobre macacos</a><br>
+<a href="girafa.html">Tudo sobre girafas</a><br>
+<a href="zebra.html">Tudo sobre zebras</a><br>
+<a href="cachorro.html">Tudo sobre cachorros</a><br>
+<a href="gato.html">Tudo sobre gatos</a><br>
+<a href=" teste.htm">Tudo sobre ratos</a><br>
+<!--FIM DO BANCO DE DADOS-->
+
+</body>
+</html>
+
