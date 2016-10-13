@@ -1,0 +1,89 @@
+body{
+  margin:0px;
+}
+.gallery .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.gallery .control-button:hover {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+.gallery {
+ /* position: relative; */
+ width: 100%;
+}
+.gallery .item {
+  height:400px;
+  overflow: hidden;
+  text-align: center;
+  border:solid 1px;
+
+}
+.gallery .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 5em;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.1s;
+  color: #000000 !important;
+}
+.gallery img{
+  width:100%;
+}
+
+.gallery .control-operator:nth-of-type(2):target ~ .secondary-controls {
+  display: block; }
+
+.gallery .secondary-controls {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none; }
+  .gallery .secondary-controls nav {
+    display: table-cell;
+    vertical-align: middle; }
+  .gallery .secondary-controls a {
+    pointer-events: auto;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all .25s; }
+    .gallery .secondary-controls a:hover {
+      transform: scale(1.1); }
+  .gallery .secondary-controls a img {
+    margin-top: .1em; }
+  .gallery .secondary-controls a:nth-child(1) {
+    float: left;
+    margin-left: .2em; }
+  .gallery .secondary-controls a:nth-child(1) img {
+    margin-right: .1em; }
+  .gallery .secondary-controls a:nth-child(2) {
+    float: right;
+    margin-right: .2em; }
+  .gallery .secondary-controls a:nth-child(2) img {
+    margin-left: .1em; }
+.gallery .secondary-controls a:nth-child(1) {
+  margin-left: 1em; }
+.gallery .secondary-controls a:nth-child(2) {
+  margin-right: 1em; }
