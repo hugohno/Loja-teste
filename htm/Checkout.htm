@@ -1,0 +1,68 @@
+<script src="<BaseLoja>htm/LojaLib.js"></script>
+<div class="FCCheckoutLogin"><Login></div>
+
+<div class="FCCheckoutMain">  
+  <div id="idChkTopFC" class="FCChkOrderConfirmationFloat"><OrderConfirmation></div>  
+  <div id="idChkCol1FC" class="FCRegisterChk">
+    <Register>
+  </div>
+  <div id="idChkCol2FC" class="FCFreightChk">
+      <span id="idChkIniCol2FC"></span>
+      <div id="idChkTagsCol2FC"><OrderCompletion><Freight><Payment></div>
+  </div>
+  <div id="idChkCol3FC" class="FCCartChk"><Cart></div>
+  <div id="idChkBottomFC"></div>
+</div>
+
+<script>
+function FuncChkPaymentEnd(){
+FuncChkChangeTitPagto("1","Boleto bancário",""); //Boleto
+FuncChkChangeTitPagto("4","Depósito Online","15px"); //Depósito
+FuncChkChangeTxtPagto("21","<label for=Pagto21><div style='line-height:20px;'><span style='font-weight:bold;'>MercadoPago</span><br>Parcelamento em até <b>18x</b> no cartão:<br><span style='font-size:8pt'>VISA, MasterCard, Diners, Amex, Hipercard, Aura, transferência bancária e boleto.</span></div></label>");
+FuncChkChangeImgPagto("3_3","mastercard_ico.jpg");
+}
+function FuncChkChangeImgPagto(sPagto,sImg){
+var oPagto=F$.GetID("idImgPagto"+ sPagto +"FC");
+if(oPagto){
+oPagto.src=FC$.PathImg+sImg;
+oPagto.style.width='65px';
+oPagto.style.height='41px';
+oPagto.style.cursor='pointer';
+}
+}
+function FuncChkChangeTxtPagto(sPagto,sTxt){
+var oPagto=F$.GetID("idTxtPagto"+ sPagto +"FC");
+if(oPagto){oPagto.innerHTML=sTxt;}
+}
+function FuncChkChangeTitPagto(sPagto,sTit,sMtop){
+var oPagto=F$.GetID("idPagto"+ sPagto +"FC");
+if(oPagto){
+var oNewElement=document.createElement("div");
+var oDivSecao=oPagto.parentNode.insertBefore(oNewElement,oPagto);
+oDivSecao.innerHTML=sTit;
+oDivSecao.style.padding="5px";
+if(sMtop!='')oDivSecao.style.marginTop=sMtop;
+oDivSecao.style.fontWeight="bold";
+oDivSecao.style.fontSize="1.1em";
+}
+}
+</script>
+<script>
+function FuncChkChangeImgPagto(sPagto,sImg){
+  var oPagto=F$.GetID("idImgPagto"+ sPagto +"FC");
+  if(oPagto){
+    oPagto.src=FC$.PathImg+sImg;
+    oPagto.style.width='65px';
+    oPagto.style.height='41px';
+    oPagto.style.cursor='pointer';
+  }
+}
+</script>
+  <script>
+
+function FuncChkChangeTxtPagto(sPagto,sTxt){
+  var oPagto=F$.GetID("idTxtPagto"+ sPagto +"FC");
+  if(oPagto){oPagto.innerHTML=sTxt;}
+}
+
+</script>
