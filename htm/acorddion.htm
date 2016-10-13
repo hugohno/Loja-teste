@@ -1,0 +1,22 @@
+<style>
+  h2.accordion{ cursor: pointer; }
+  div.accordion{ display: none; }
+    #idTitRegisterFC{cursor: pointer;}
+  #idChkTabRegisterFC{display: none;}
+</style>
+
+
+
+<div class="exemplo">
+  <h2 id="idTitRegisterFC">Título</h2>
+  <div id="idChkTabRegisterFC">
+    <p> texto de descrição </p>
+  </div>
+</div>
+<script>
+function accordion(){
+
+  document.getElementById("idTitRegisterFC").click(alert("teste"));
+}
+</script>
+<script>accordion();</script>
