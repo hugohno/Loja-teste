@@ -76,3 +76,29 @@
     <div class="ProdCompraHomeR"><center><FormProd><LinkComprar></FormProd></center></div>
     <a href="#Spy" onclick='bCascate=true;FCLib$.OpenRWD("/listaprodutos.asp?idloja=<IDLoja>&sty=9&int=1&idproduto=<IDProduto>","Disp","width=700,height=700")'><div class="ProdSpyHomeR"><b>Espiar</b></div></a>
 </p195>
+<p194>
+  <div class="DivHomeProd">
+  <a href="#" onclick="NoCascate('<URLProd>');">
+  <div class="DivHomeImagemProd"><ImagemProd></div>
+  <div class="DivIntHomeProd"> 
+    <div class="DivHomeNomeProd">
+      <span class="HomeNomeProd text-overflow font-16"><NomeProd></span>
+    </div>
+    <div class="DivHomePriceProd" style="white-space:nowrap;">
+      <!--div><PrecoSimples></div-->
+      <div id="idProdPrice<IDProduto>"><script>sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>',<MaxParcelasProdNum>,<IDProduto>);</script></div> 
+      <div class="PriceAVistaLista"><script>sF$.fnShowParcels(<PrecoNum>,<MaxParcelasProdNum>);</script><br><script>sF$.fnMostraDescontoHome(<PrecoNum>);</script></div>
+      </a>
+    </div>
+      <div>          <script type="text/javascript">
+            iQtdOp=<OpiniaoQtd>;
+            if(iQtdOp==0){document.write("<div class='ProductStyleReviewOffBoxFC'><div class='NotaOpiniaoVazio NotaOpiniaoVazio1'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio2'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio3'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio4'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio5'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio6'></div></div>")}
+            else {document.write("<div class='ProductStyleReviewOnBoxFC'><div class='ProductStyleReviewStarsOnFC'><OpiniaoMedia></div><div class='ProductStyleReviewQtyOnFC'>(<a href='#OP' style='text-decoration:none;'><OpiniaoQtd></a>)</div></div>")}
+          </script></div>
+      <div class="Two">
+    <div class="DivHomeDetails"><LinkDet></div>
+        </div>
+  </div>
+  </FormProd>
+</div>
+</p194>  
