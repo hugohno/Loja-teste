@@ -1,6 +1,6 @@
 <script src="<BaseLoja>htm/BuyTogether.js"></script>
 <link rel="stylesheet" href="<BaseLoja>htm/BuyTogether.css">
-
+<script src="<BaseLoja>htm/SimulaFreteFC.js"></script>
 <script>
 bT$.setVarProds({id:<IDProduto>,qt:1,qty:<Estoque>,Adicional1:"<Adicional1Val>",Adicional2:"<Adicional2Val>",Adicional3:"<Adicional3Val>",AdicionalD1:"<AdicionalD1Val>",AdicionalD2:"<AdicionalD2Val>",AdicionalD3:"<AdicionalD3Val>",Cor:"<CorVal>",Peso:"<Peso>",PrecoNum:<PrecoNum>,PrecoOri:<PrecoOri>});
 </script>
@@ -57,6 +57,8 @@ bT$.setVarProds({id:<IDProduto>,qt:1,qty:<Estoque>,Adicional1:"<Adicional1Val>",
 				<label for="CB<IDProdutoConj>">Comprar junto</label>
 			</div>
 		</div>
+		<div id="ShowCEP<IDProduto>"></div>
+		<script>ShowCEP(<IDProduto>);</script>
 	
     <script>
     bT$.setVarProds({id:<IDProdutoConj>,qt:1,qty:<EstoqueConj>,Adicional1:"<Adicional1Conj>",Adicional2:"<Adicional2Conj>",Adicional3:"<Adicional3Conj>",AdicionalD1:"<AdicionalD1Conj>",AdicionalD2:"<AdicionalD2Conj>",AdicionalD3:"<AdicionalD3Conj>",Cor:"<CorConj>",Peso:"<Peso>",PrecoNum:<PrecoNumConj>,PrecoOri:<PrecoOriConj>});
