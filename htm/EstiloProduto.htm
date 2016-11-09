@@ -90,6 +90,21 @@ OffsetAutoPagFC=290;
         <div class="DivListProdDetails"><a href="<URLProd>">Detalhes</a></div>
       </div>
   </div>
+        <sub>
+        <FormProd>
+
+            <div class="DivDetImagemProd">
+              <img onError="MostraImgOnError(this,0)" src="<ImagemProdPri>">
+            </div>
+
+              <div class="DivPrice col-small-12 col-medium-12 col-large-6 col-xlarge-6 text-left">
+                <div class="Price"> 
+                  <div><div class="ProdPrice" id="idProdPrice<IDProduto>"></div></div>
+                  <script>sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>',<MaxParcelasProdNum>,<IDProduto>);</script>        
+                    </div>
+                  </div>
+        </FormProd>
+      </sub>
 </FormProd>
       <!--<script>
     function Imgslist(){
